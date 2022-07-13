@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DatabaseMigrationSettings" mainChangeLogName="#increment(1, 1, &quot;000&quot;)-changelog">
+    <database-infos>
+      <database-info>
+        <option name="enabled" value="true" />
+        <dbms-id>mysql</dbms-id>
+      </database-info>
+    </database-infos>
+    <pkConstraintName name="pkConstraintName" />
+  </component>
+  <component name="JpaPluginProjectSettings" dtoClassNamePostfix="DTO">
+    <option name="entityNameTemplate" />
+    <option name="tableNameTemplate" value="${className.underscore().toLowerCase().pluralize()}" />
+    <option name="useLazyOnToOneAssociations" value="true" />
+    <option name="scaffoldingLanguage" />
+  </component>
+</project>
