@@ -11,7 +11,8 @@ import javax.persistence.Table;
 @Table(name = "alternative")
 public class Alternative {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
     private String description;
     private boolean correct;
 
