@@ -21,8 +21,8 @@ public class Question {
    // private $alternatives;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category;
+    @JoinColumn(name = "categories_id")
+    private Categories categories;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "alternative_id")
@@ -111,14 +111,14 @@ public class Question {
         this.level = level;
     }
 
-    public Category getCategory()
+    public Categories getCategories()
     {
-        return this.category;
+        return this.categories;
     }
 
-    public void setCategory(Category category)
+    public void setCategory(Categories category)
     {
-        this.category = category;
+        this.categories = category;
 
     }
 
