@@ -17,38 +17,32 @@ public class Alternative {
     @JoinColumn(name = "question_id")
     private Question question;
 
-
     public Alternative() {
     }
 
-    public Alternative(Long id)
-    {
+    public Alternative(Long id) {
         super();
         this.id = id;
     }
 
-    public Long getId(){
+    public Long getId() {
         return id;
     }
 
 
-    public String getDescription()
-    {
+    public String getDescription() {
         return this.description;
     }
 
-    public void setDescription(String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public boolean getCorrect(boolean correct)
-    {
+    public boolean getCorrect(boolean correct) {
         return this.correct;
     }
 
-    public void setCorrect(boolean correct)
-    {
+    public void setCorrect(boolean correct) {
         this.correct = correct;
 
     }
@@ -58,8 +52,7 @@ public class Alternative {
         return this.question;
     }
 
-    public void setQuestion(Question question)
-    {
+    public void setQuestion(Question question) {
         this.question = question;
 
 
