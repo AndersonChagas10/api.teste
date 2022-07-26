@@ -16,7 +16,7 @@ public class AssessmentsAnswers {
     @JoinColumn(name = "question_id")
     private Question question;
     private double grade;
-    private String source_code;
+    private String sourceCode;
 
     public long getId() {
         return id;
@@ -50,11 +50,11 @@ public class AssessmentsAnswers {
         this.grade = grade;
     }
 
-    public String getSource_code() {
-        return source_code;
+    public String getSourceCode() {
+        return sourceCode;
     }
 
-    public void setSource_code(String source_code) {
-        this.source_code = source_code;
+    public void setSourceCode(String sourceCode) {
+        this.sourceCode = sourceCode;
     }
 }

@@ -5,7 +5,7 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "question")
+@Table(name = "questions")
 public class Question {
 
     @Id
@@ -16,9 +16,30 @@ public class Question {
     private String language;
     private String expectedOutput;
 
+    public void setAnswerType(Integer answerType) {
+        this.answerType = answerType;
+    }
 
-   // private $category;
-   // private $alternatives;
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    public void setCategories(Categories categories) {
+        this.categories = categories;
+    }
+
+    public Alternative getAlternative() {
+        return alternative;
+    }
+
+    public void setAlternative(Alternative alternative) {
+        this.alternative = alternative;
+    }
+
+    public void setAlternatives(Collection alternatives) {
+        this.alternatives = alternatives;
+    }
+
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "categories_id")
@@ -27,14 +48,13 @@ public class Question {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "alternative_id")
     private Alternative alternative;
-
+    @JoinColumn(name = "skill_id")
     private Skill skill;
+    @JoinColumn(name = "level_id")
     private Level level;
     private Collection alternatives;
 
-    public Question(){
 
-    }
     public Long getId() {
         return id;
     }

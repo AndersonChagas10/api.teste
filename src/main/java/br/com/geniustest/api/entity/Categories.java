@@ -8,10 +8,15 @@ import javax.persistence.*;
 public class Categories {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String title;
+    @JoinColumn (name = "skill_id")
     private Skill skill;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Long getId()
     {
@@ -29,14 +34,11 @@ public class Categories {
 
     }
 
-    public Skill getSkill()
-    {
-        return this.skill;
+    public Skill getSkill() {
+        return skill;
     }
 
-    public void setSkill(Skill skill)
-    {
+    public void setSkill(Skill skill) {
         this.skill = skill;
-
     }
 }
