@@ -4,16 +4,17 @@ package br.com.geniustest.api.entity;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "AssessmentAnswerMetric")
-public class AssessmentAnswerMetric {
+@Table(name = "AssessmentsAnswersMetrics")
+public class AssessmentsAnswersMetrics {
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @JoinColumn(name = "AssessmentsAnswers_id")
+    @JoinColumn(name = "assessment_answer_id")
     private AssessmentsAnswers assessmentsAnswers;
     private String metric;
-    private String grade;
+    private double grade;
 
     public long getId() {
         return id;
@@ -39,11 +40,11 @@ public class AssessmentAnswerMetric {
         this.metric = metric;
     }
 
-    public String getGrade() {
+    public double getGrade() {
         return grade;
     }
 
-    public void setGrade(String grade) {
+    public void setGrade(double grade) {
         this.grade = grade;
     }
 }

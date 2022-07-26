@@ -1,23 +1,23 @@
 package br.com.geniustest.api.entity;
 
+
+
 import javax.persistence.*;
 
-
-
 @Entity
-public class AssesmentSkillMetric {
+@Table(name = "AssessmentsSkillsMetrics")
+public class AssessmentsSkillsMetrics {
 
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @JoinColumn(name = "assessment" )
+    @JoinColumn(name = "assessment_id")
     private Assessment assessment;
     @JoinColumn(name = "skill_id")
     private Skill skill;
     @JoinColumn(name = "categories_id")
     private Categories categories;
-    @Column(name = "grade")
     private double grade;
     @JoinColumn(name = "level_id")
     private Level level;
@@ -30,12 +30,12 @@ public class AssesmentSkillMetric {
         this.id = id;
     }
 
-    public Assessment getAsseessment() {
-        return getAsseessment();
+    public Assessment getAssessment() {
+        return assessment;
     }
 
-    public void setAsseessment(Assessment asseessment) {
-        this.assessment = asseessment;
+    public void setAssessment(Assessment assessment) {
+        this.assessment = assessment;
     }
 
     public Skill getSkill() {
@@ -69,5 +69,4 @@ public class AssesmentSkillMetric {
     public void setLevel(Level level) {
         this.level = level;
     }
-
 }

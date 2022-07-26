@@ -8,10 +8,11 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "cadidate")
+@Table(name = "candidate_id")
 public class Candidate {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String fullname;
     private String email;
 
