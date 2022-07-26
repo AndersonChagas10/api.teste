@@ -14,9 +14,7 @@ import java.util.Set;
 @SuppressWarnings("java:S1948")
 public class User implements UserDetails {
 
-    //TODO IMPORTANT
-    //TODO Change fields according with the current project
-    //TODO IMPORTANT
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
