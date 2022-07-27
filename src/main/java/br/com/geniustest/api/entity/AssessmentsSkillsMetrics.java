@@ -17,7 +17,7 @@ public class AssessmentsSkillsMetrics {
     @JoinColumn(name = "skill_id")
     private Skill skill;
     @JoinColumn(name = "categories_id")
-    private Categories categories;
+    private Category category;
     private double grade;
     @JoinColumn(name = "level_id")
     private Level level;
@@ -46,12 +46,12 @@ public class AssessmentsSkillsMetrics {
         this.skill = skill;
     }
 
-    public Categories getCategory() {
-        return categories;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategory(Categories category) {
-        this.categories = category;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public double getGrade() {
