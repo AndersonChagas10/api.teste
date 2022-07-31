@@ -4,7 +4,7 @@ package br.com.geniustest.api.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "AssessmentsAnswersMetrics")
+@Table(name = "assessments_answers_metrics")
 public class AssessmentsAnswersMetrics {
 
     @Id

@@ -4,13 +4,13 @@ package br.com.geniustest.api.entity;
 import javax.persistence.*;
 
 @Entity
-@Table (name = "AssessmentAnswerMetric")
+@Table (name = "assessment_answer_metrics")
 public class AssessmentAnswerMetric {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @JoinColumn(name = "AssessmentsAnswers_id")
+    @JoinColumn(name = "assessments_answers_id")
     private AssessmentsAnswers assessmentsAnswers;
     private String metric;
     private String grade;

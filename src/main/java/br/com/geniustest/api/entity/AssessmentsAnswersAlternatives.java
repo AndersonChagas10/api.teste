@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "AssessmentsAnswersAlternatives")
+@Table(name = "assessments_answers_alternatives")
 
 public class AssessmentsAnswersAlternatives {
 
