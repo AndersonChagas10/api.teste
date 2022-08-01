@@ -2,7 +2,7 @@ package br.com.geniustest.api.entity;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-
+import java.util.UUID;
 
 
 @Entity
@@ -18,7 +18,7 @@ public class Assessment {
     @ManyToOne
     @JoinColumn(name = "opportunity_ID")
     private Opportunity opportunity;
-    private  String uuid;
+    private  UUID uuid;
     private  String situation;
 
     private LocalDateTime startedAt ;
@@ -59,11 +59,12 @@ public class Assessment {
         this.opportunity = opportunity;
     }
 
-    public String getUuid() {
+
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(String uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 
